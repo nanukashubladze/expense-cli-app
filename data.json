@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "total": "500",
+    "category": "groceries",
+    "date": "24-02-07"
+  },
+  {
+    "id": 2,
+    "total": "2200",
+    "category": "mobile",
+    "date": "2024-01-01"
+  }
+]
