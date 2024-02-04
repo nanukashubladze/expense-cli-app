@@ -13,18 +13,18 @@ program
   .argument("<date>", "")
   .action((total, category, date) => {
     fs.readFile("./data.json", "utf-8").then((data) => {
-      let expenseManager = [];
+      let expenses = [];
       if (data) {
-        expenseManager = JSON.parse(data);
+        expenses = JSON.parse(data);
       }
       const expense = {
-        id: expenseManager.length + 1,
+        id: expenses.length + 1,
         total,
         category,
         date,
       };
-      expenseManager.push(expense);
-      const json = JSON.stringify(expenseManager, null, 2);
+      expenses.push(expense);
+      const json = JSON.stringify(expenses, null, 2);
       fs.writeFile("./data.json", json);
     });
   });
